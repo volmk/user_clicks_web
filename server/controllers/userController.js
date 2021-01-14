@@ -2,14 +2,18 @@ import asyncHandler from 'express-async-handler'
 import User from '../models/userModel.js'
 
 const getUserList = asyncHandler(async (req, res, next) => {
-    const page = +req.query.page || 1
-    const pageSize = +req.query.size || 10 //limit
+    let page = +req.query.page || 1
+    const pageSize = +req.query.size || 50 //limit
 
     const count = await User.getUserCount()
+    const maxPage = Math.ceil(count / pageSize)
+
+    if(page < 1) page = 1
+    else if (page > maxPage + 1) page = maxPage
 
     const users = await User.getAll(pageSize, (page - 1) * pageSize)
 
-    res.json({users, page, pages: Math.ceil(count / pageSize)})
+    res.json({users, page, maxPage})
 })
 
 const isValidDate = (dateStr) => {

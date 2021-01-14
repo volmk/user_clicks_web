@@ -1,8 +1,8 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 
 function UserPage({match}) {
-    const uid = match.params.uid
+    const {uid} = useParams()
     console.log(uid)
     return (
         <div>
