@@ -7,6 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server/server",
+    "server:kill": "kill $(lsof -t -i:5000) && node server/server",
     "killport": "kill $(lsof -t -i:5000)",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",

@@ -16,19 +16,22 @@ const createAndInsert = (tableName, createReq, filename, insertReq) => {
     db.get(`SELECT name FROM sqlite_master  WHERE type='table' AND name='${tableName}'`, (err, data) => {
         onErr(err)
         if (data) return
-
         db.run(createReq, (err) => {
             onErr(err)
             const jsonData = fs.readFileSync(path.resolve(__dirname, filename), 'utf-8')
             const dataList = JSON.parse(jsonData)
-
             const stmt = db.prepare(insertReq)
 
-            while(dataList.length){
-                stmt.run(Object.values(dataList.pop()))
-            }
+            db.serialize(() => {
+                db.run("begin transaction");
 
-            stmt.finalize();
+                for (const item of dataList) {
+                    stmt.run(Object.values(item))
+                }
+
+                stmt.finalize();
+                db.run("commit");
+            })
         })
     })
 }
@@ -44,7 +47,7 @@ const createUserTableReq = 'CREATE TABLE user (\
 
 const createUserStatTableReq = 'CREATE TABLE users_stat (\
                 user_id INTEGER, \
-                date text, \
+                date DATE, \
                 page_views INTEGER, \
                 clicks INTEGER \
                 )'
