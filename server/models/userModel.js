@@ -44,7 +44,6 @@ class User {
                     if (dateFrom && dateTo) {
                         requestUsersStat += ` AND date BETWEEN '${dateFrom}' AND '${dateTo}'`
                     }
-                    console.log(requestUsersStat)
                     database.all(requestUsersStat, (err, statList) => {
                         if (err) reject(err)
                         else {

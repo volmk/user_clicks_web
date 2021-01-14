@@ -8,33 +8,34 @@ import Paginate from "../components/Paginate";
 function UserListPage({location}) {
     const page = useQuery(location.search, 'page', 1)
 
-    const {data, loading, error} = useRequest(`api/users?page=${page}`)
+    const {data, loading, error} = useRequest(`/api/users?page=${page}`)
     const history = useHistory();
 
     useEffect(() => {
         if (data.page && page !== data.page) {
             history.push(`/users?page=${data.page}`)
         }
-    }, [data])
-    console.log(data)
+    }, [data, history, page])
     return (
         <div>
             <Link to='/'>Home</Link>
-            {loading
-                ? <Loading/>
-                : error
-                    ? <p>{error}</p>
-                    : <div>
-                        {data.users.map((e, i) =>
-                            <div key={i}>
-                                <Link to={`users/${e.id}`}>{e.first_name}</Link>
-                                <br/>
-                            </div>
-                        )}
-                        <Paginate toLink='/users?page='
-                                  page={page}
-                                  maxPage={data.maxPage}/>
-                    </div>}
+            {loading ? (
+                <Loading/>
+            ) : error ? (
+                <p>{error}</p>
+            ) : (
+                <div>
+                    {data.users.map((e, i) =>
+                        <div key={i}>
+                            <Link to={`users/${e.id}`}>{e.first_name}</Link>
+                            <br/>
+                        </div>
+                    )}
+                    <Paginate toLink='/users?page='
+                              page={page}
+                              maxPage={data.maxPage}/>
+                </div>
+            )}
         </div>
     );
 }

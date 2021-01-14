@@ -12,15 +12,16 @@ const useRequest = (initUrl) => {
             try {
                 if (!ignore) {
                     setLoading(true)
-                    const {data} = await axios(initUrl)
+                    const {data} = await axios.get(initUrl)
                     setData(data)
                 }
             } catch (err) {
-                setError(err)
+                setError(err.toString())
+            } finally {
+                setLoading(false)
             }
-            setLoading(false)
-
         }
+
         fetchProduct()
         return (() => {
             ignore = true
