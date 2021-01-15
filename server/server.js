@@ -9,6 +9,7 @@ import userRoutes from './routes/userRoutes.js'
 
 dotenv.config()
 
+const __dirname = path.resolve()
 const app = express()
 
 if (process.env.NODE_ENV === 'development') {
