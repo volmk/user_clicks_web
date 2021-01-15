@@ -1,41 +1,42 @@
 @import "mixins";
 
-.header{
+.header {
   background-image: url("/images/bg-header.png");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: cover;
+  background-size: auto 100%;
+
   color: white;
 
-  &__body{
+  &__body {
     @include container;
 
     display: flex;
     justify-content: space-between;
   }
 
-  &__content{
+  &__content {
     padding-top: 20px;
     max-width: 585px;
     height: 290px;
   }
 
-  &__title{
+  &__title {
     font-size: 48px;
     font-weight: 400;
     margin: 15px 0;
 
-    &--strong{
+    &--strong {
       font-weight: 700;
     }
   }
 
-  &__subtitle{
+  &__subtitle {
     font-size: 20px;
     margin: 15px 0;
   }
 
-  &__button{
+  &__button {
     padding: 17px 32px;
     background-color: white;
     border-radius: 8px;
@@ -44,23 +45,24 @@
     font-family: inherit;
     border-color: white;
     margin: 15px 0;
-cursor: pointer;
+    cursor: pointer;
   }
 
-  &__image{
+  &__image {
     margin: 10px 100px;
   }
 }
 
 @media only screen and (max-width: 900px) {
-  .header{
+  .header {
     text-align: center;
-    &__body{
+
+    &__body {
       flex-direction: column;
       align-items: center;
     }
 
-    &__content{
+    &__content {
       margin-bottom: 50px;
     }
   }
