@@ -1,9 +1,9 @@
 import React from 'react'
 import Navbar from "../components/scripts/Navbar";
 import Breadcrumb from "../components/scripts/Breadcrumb";
-import './UserListPage.scss'
 import Footer from "../components/scripts/Footer";
 import UserList from "../components/scripts/UserList";
+import './UserListPage.scss'
 
 function UserListPage({location}) {
     const links = [
