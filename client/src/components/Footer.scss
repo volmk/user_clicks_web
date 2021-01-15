@@ -1,0 +1,30 @@
+.footer {
+  max-width: 1180px;
+  margin: 0 auto;
+  height: 57px;
+
+  &--bigger{
+    height: 80px;
+  }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    font-size: 24px;
+
+    &--bigger {
+      font-size: 32px;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  &__center, &__copy {
+    font-size: 16px;
+  }
+}

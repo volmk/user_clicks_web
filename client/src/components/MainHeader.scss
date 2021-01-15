@@ -1,0 +1,52 @@
+.header{
+  height: 655px;
+  background-image: url("/images/bg-header.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+  color: white;
+
+  &__body{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  &__content{
+    padding-top: 20px;
+    max-width: 585px;
+    height: 290px;
+  }
+
+  &__title{
+    font-size: 48px;
+    font-weight: 400;
+    margin: 15px 0;
+
+    &--strong{
+      font-weight: 700;
+    }
+  }
+
+  &__subtitle{
+    font-size: 20px;
+    margin: 15px 0;
+  }
+
+  &__button{
+    padding: 17px 32px;
+    background-color: white;
+    border-radius: 8px;
+    color: #3A80BA;
+    font-size: 16px;
+    font-family: inherit;
+    border-color: white;
+    margin: 15px 0;
+
+  }
+
+  &__image{
+    margin: 0 100px;
+  }
+}

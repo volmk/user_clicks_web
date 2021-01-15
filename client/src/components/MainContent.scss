@@ -1,0 +1,26 @@
+.main{
+  max-width: 1180px;
+  margin: 16px auto;
+
+  &__title{
+    font-size: 32px;
+    max-width: 580px;
+    margin: 12px auto;
+    text-align: center;
+  }
+
+  &__subtitle{
+    color: #7E7E7E;
+    font-size: 20px;
+    text-align: center;
+    max-width: 780px;
+    margin: 12px auto;
+  }
+}
+
+.cards{
+  max-width: 1180px;
+  margin: 28px auto;
+  display: flex;
+  justify-content: space-between;
+}
