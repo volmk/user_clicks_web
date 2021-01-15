@@ -7,7 +7,7 @@ import '../styles/MainHeader.scss'
 function MainHeader(props) {
     return <header className="header">
         <div className="header__container">
-            <Navbar background={false}/>
+            <Navbar backgroundOff/>
             <div className="header__body">
                 <div className="header__content">
                     <h1 className="header__title">

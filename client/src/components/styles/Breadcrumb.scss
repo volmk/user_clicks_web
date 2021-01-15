@@ -1,0 +1,28 @@
+.breadcrumbs {
+  list-style: none;
+  padding-left: 0;
+  margin: 16px 0;
+
+  &__item {
+    font-size: 16px;
+    display: inline;
+
+    a {
+      color: #CCCCCC;
+      text-decoration: none;
+    }
+
+    &:last-child {
+      a {
+        color: #3A80BA;
+      }
+    }
+
+    + .breadcrumbs__item:before {
+      content: ">";
+      margin: 0 8px;
+      color: #CCCCCC;
+    }
+  }
+
+}

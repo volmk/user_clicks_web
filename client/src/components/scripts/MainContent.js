@@ -37,8 +37,8 @@ function MainContent() {
             Learn more about our work!
         </div>
         <div className="cards">
-            {cards.map(item =>
-                <Card icon={item.icon} iconAlt={item.iconAlt} title={item.title} subtitle={item.subtitle}/>
+            {cards.map((item, idx) =>
+                <Card key={idx} icon={item.icon} iconAlt={item.iconAlt} title={item.title} subtitle={item.subtitle}/>
             )}
         </div>
     </main>

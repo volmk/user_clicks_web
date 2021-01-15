@@ -1,0 +1,32 @@
+.pagination{
+  margin: 22px auto;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+
+  &__item{
+    border: 2px solid #F1F1F1;
+    border-radius: 8px;
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+
+    a {
+      line-height: 40px;
+      text-decoration: none;
+      color: #1A1A1A;
+    }
+
+    &--active{
+      border: 2px solid #3A80BA;
+      background: #3A80BA;
+
+      a {
+        color: #FFF;
+      }
+    }
+
+  }
+}

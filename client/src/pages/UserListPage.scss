@@ -1,0 +1,11 @@
+@import "src/components/styles/mixins";
+
+.list_page {
+  @include container;
+
+  &__title{
+    font-size: 32px;
+    font-weight: 700;
+    margin: 24px 0;
+  }
+}

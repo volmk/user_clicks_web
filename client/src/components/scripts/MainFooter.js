@@ -10,7 +10,7 @@ function MainFooter() {
                 <button className="main_footer__button">Subscribe</button>
             </form>
         </div>
-        <Footer background={false}/>
+        <Footer backgroundOff={true}/>
     </div>
 
 }

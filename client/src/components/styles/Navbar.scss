@@ -1,17 +1,27 @@
 @import "mixins";
 
 .nav{
-  @include container;
+  background: #3A80BA;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
-  display: flex;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  justify-content: left;
-  align-items: center;
+  &--bg_transparent {
+    background: transparent;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 
-  &__logo{
+  &__content{
+    @include container;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__logo {
     font-size: 40px;
-    a{
+
+    a {
       color: white;
       text-decoration: none;
 

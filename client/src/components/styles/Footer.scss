@@ -1,23 +1,30 @@
 @import "mixins";
 
 .footer {
-  @include container;
-  height: 57px;
+  background: #1C3B55;
+  color: white;
 
-  &--bigger{
-    height: 80px;
+  &__content {
+    @include container;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  &--bg_transparent {
+    background: transparent;
+    height: 80px;
+
+    .footer__logo {
+      font-size: 32px;
+    }
+  }
 
   &__logo {
     font-size: 24px;
-
-    &--bigger {
-      font-size: 32px;
-    }
 
     a {
       color: white;
@@ -27,5 +34,15 @@
 
   &__center, &__copy {
     font-size: 16px;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .footer {
+    &__content {
+      flex-direction: column;
+    }
   }
 }
