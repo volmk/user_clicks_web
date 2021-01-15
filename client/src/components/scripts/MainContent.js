@@ -1,9 +1,9 @@
 import React from 'react';
-import './MainContent.scss'
+import '../styles/MainContent.scss'
 import Card from "./Card";
-import ImgCloud from '../images/icon-cloud.png'
-import ImgLock from '../images/icon-lock.png'
-import ImgDevices from '../images/icon-devices.png'
+import ImgCloud from '../../images/icon-cloud.png'
+import ImgLock from '../../images/icon-lock.png'
+import ImgDevices from '../../images/icon-devices.png'
 
 
 function MainContent() {

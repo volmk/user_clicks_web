@@ -1,16 +1,17 @@
+@import "mixins";
+
 .header{
-  height: 655px;
   background-image: url("/images/bg-header.png");
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: 100% auto;
+  background-size: cover;
   color: white;
 
   &__body{
+    @include container;
+
     display: flex;
     justify-content: space-between;
-    max-width: 1180px;
-    margin: 0 auto;
   }
 
   &__content{
@@ -48,5 +49,19 @@
 
   &__image{
     margin: 0 100px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .header{
+    text-align: center;
+    &__body{
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__content{
+      margin-bottom: 50px;
+    }
   }
 }

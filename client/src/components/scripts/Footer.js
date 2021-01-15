@@ -1,5 +1,5 @@
 import React from 'react';
-import './Footer.scss'
+import '../styles/Footer.scss'
 function Footer({background}) {
     const footerClass = ['footer']
     const logoClass = ['footer__logo']

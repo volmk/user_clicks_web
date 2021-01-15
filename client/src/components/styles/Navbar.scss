@@ -1,8 +1,11 @@
+@import "mixins";
+
 .nav{
+  @include container;
+
   display: flex;
-  padding: 24px 0;
-  max-width: 1180px;
-  margin: 0 auto;
+  padding-top: 24px;
+  padding-bottom: 24px;
   justify-content: left;
   align-items: center;
 

@@ -1,6 +1,9 @@
+@import "mixins";
+
 .main{
-  max-width: 1180px;
-  margin: 16px auto;
+  @include container;
+  margin-top: 16px;
+  margin-bottom: 16px;
 
   &__title{
     font-size: 32px;
@@ -22,5 +25,6 @@
   max-width: 1180px;
   margin: 28px auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-flow: row wrap;
 }

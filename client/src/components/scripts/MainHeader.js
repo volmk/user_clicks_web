@@ -1,8 +1,8 @@
 import React from 'react';
 import Navbar from "./Navbar";
 import {Link} from "react-router-dom";
-import mobile from "../images/mobile.png";
-import './MainHeader.scss'
+import mobile from "../../images/mobile.png";
+import '../styles/MainHeader.scss'
 
 function MainHeader(props) {
     return <header className="header">

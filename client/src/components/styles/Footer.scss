@@ -1,6 +1,7 @@
+@import "mixins";
+
 .footer {
-  max-width: 1180px;
-  margin: 0 auto;
+  @include container;
   height: 57px;
 
   &--bigger{

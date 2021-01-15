@@ -2,8 +2,8 @@ import React, {useEffect} from 'react'
 import {Link, useHistory} from "react-router-dom"
 import useRequest from "../hooks/useRequest";
 import useQuery from "../hooks/useQuery";
-import Loading from "../components/Loading";
-import Paginate from "../components/Paginate";
+import Loading from "../components/scripts/Loading";
+import Paginate from "../components/scripts/Paginate";
 
 function UserListPage({location}) {
     const page = useQuery(location.search, 'page', 1)

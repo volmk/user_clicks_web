@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from "./Footer";
-import './MainFooter.scss'
+import '../styles/MainFooter.scss'
 
 function MainFooter() {
     return <div className='main_footer'>
